@@ -1,0 +1,72 @@
+2015-02-06T20:04:40.317147+00:00 heroku[api]: Enable Logplex by e.ahmed.shendy@hotmail.com
+2015-02-06T20:04:40.317147+00:00 heroku[api]: Release v2 created by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.148727+00:00 heroku[api]: Set LANG, RAILS_ENV, RACK_ENV, SECRET_KEY_BASE config vars by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.148727+00:00 heroku[api]: Release v3 created by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.867694+00:00 heroku[api]: Set DATABASE_URL config vars by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.867694+00:00 heroku[api]: Release v4 created by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.959348+00:00 heroku[api]: Attach HEROKU_POSTGRESQL_ROSE resource by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:53.959449+00:00 heroku[api]: Release v5 created by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:54.302527+00:00 heroku[api]: Scale to web=1 by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:54.379719+00:00 heroku[api]: Deploy 3a17d7c by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:54.379780+00:00 heroku[api]: Release v6 created by e.ahmed.shendy@hotmail.com
+2015-02-06T20:08:57.724644+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 3472 -e production`
+2015-02-06T20:09:01.654789+00:00 app[web.1]: [2015-02-06 20:09:01] INFO  WEBrick 1.3.1
+2015-02-06T20:09:01.654812+00:00 app[web.1]: [2015-02-06 20:09:01] INFO  ruby 2.0.0 (2014-11-13) [x86_64-linux]
+2015-02-06T20:09:01.655198+00:00 app[web.1]: [2015-02-06 20:09:01] INFO  WEBrick::HTTPServer#start: pid=3 port=3472
+2015-02-06T20:09:01.693953+00:00 heroku[web.1]: State changed from starting to up
+2015-02-06T20:10:00.773117+00:00 app[web.1]: => Booting WEBrick
+2015-02-06T20:10:00.773123+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2015-02-06T20:10:00.773126+00:00 app[web.1]: Started GET "/" for 41.44.249.56 at 2015-02-06 20:10:00 +0000
+2015-02-06T20:10:00.773125+00:00 app[web.1]: => Ctrl-C to shutdown server
+2015-02-06T20:10:00.773121+00:00 app[web.1]: => Rails 4.2.0 application starting in production on http://0.0.0.0:3472
+2015-02-06T20:10:01.188413+00:00 heroku[router]: at=info method=GET path="/" host=sh-toy-app.herokuapp.com request_id=592cf7d8-f44d-4e8d-910b-920151c14a27 fwd="41.44.249.56" dyno=web.1 connect=22ms service=501ms status=500 bytes=1754
+2015-02-06T20:10:01.157877+00:00 app[web.1]: Processing by UsersController#index as HTML
+2015-02-06T20:10:01.177110+00:00 app[web.1]: Completed 500 Internal Server Error in 19ms
+2015-02-06T20:10:01.175971+00:00 app[web.1]: PG::UndefinedTable: ERROR:  relation "users" does not exist
+2015-02-06T20:10:01.175974+00:00 app[web.1]: LINE 1: SELECT "users".* FROM "users"
+2015-02-06T20:10:01.175975+00:00 app[web.1]:                               ^
+2015-02-06T20:10:01.175977+00:00 app[web.1]: : SELECT "users".* FROM "users"
+2015-02-06T20:10:01.176970+00:00 app[web.1]:   Rendered users/index.html.erb within layouts/application (5.1ms)
+2015-02-06T20:10:01.179696+00:00 app[web.1]: 
+2015-02-06T20:10:01.179699+00:00 app[web.1]: ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "users" does not exist
+2015-02-06T20:10:01.179701+00:00 app[web.1]: LINE 1: SELECT "users".* FROM "users"
+2015-02-06T20:10:01.179703+00:00 app[web.1]:                               ^
+2015-02-06T20:10:01.175940+00:00 app[web.1]:   [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+2015-02-06T20:10:01.179704+00:00 app[web.1]: : SELECT "users".* FROM "users"):
+2015-02-06T20:10:01.179706+00:00 app[web.1]:     12:   </thead>
+2015-02-06T20:10:01.179709+00:00 app[web.1]:     14:   <tbody>
+2015-02-06T20:10:01.179707+00:00 app[web.1]:     13: 
+2015-02-06T20:10:01.179711+00:00 app[web.1]:     15:     <% @users.each do |user| %>
+2015-02-06T20:10:01.179715+00:00 app[web.1]:     17:         <td><%= user.name %></td>
+2015-02-06T20:10:01.179713+00:00 app[web.1]:     16:       <tr>
+2015-02-06T20:10:01.179718+00:00 app[web.1]:     18:         <td><%= user.email %></td>
+2015-02-06T20:10:01.179723+00:00 app[web.1]: 
+2015-02-06T20:10:01.179720+00:00 app[web.1]:   app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___2022150171599057010_69967719240280'
+2015-02-06T20:10:01.179724+00:00 app[web.1]: 
+2015-02-06T20:10:02.473928+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=sh-toy-app.herokuapp.com request_id=40fe4c03-ab89-4ec9-9def-9c4a426dacc7 fwd="41.44.249.56" dyno=web.1 connect=2ms service=7ms status=200 bytes=228
+2015-02-06T20:10:20.696439+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2015-02-06T20:10:20.692796+00:00 app[web.1]: Processing by UsersController#index as HTML
+2015-02-06T20:10:20.695383+00:00 app[web.1]: LINE 1: SELECT "users".* FROM "users"
+2015-02-06T20:10:20.695385+00:00 app[web.1]:                               ^
+2015-02-06T20:10:20.695387+00:00 app[web.1]: : SELECT "users".* FROM "users"
+2015-02-06T20:10:20.696294+00:00 app[web.1]:   Rendered users/index.html.erb within layouts/application (2.4ms)
+2015-02-06T20:10:20.695380+00:00 app[web.1]: PG::UndefinedTable: ERROR:  relation "users" does not exist
+2015-02-06T20:10:20.695345+00:00 app[web.1]:   [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+2015-02-06T20:10:20.690899+00:00 app[web.1]: Started GET "/" for 197.160.212.120 at 2015-02-06 20:10:20 +0000
+2015-02-06T20:10:20.698359+00:00 app[web.1]: 
+2015-02-06T20:10:20.698362+00:00 app[web.1]: ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "users" does not exist
+2015-02-06T20:10:20.698372+00:00 app[web.1]:     14:   <tbody>
+2015-02-06T20:10:20.698365+00:00 app[web.1]:                               ^
+2015-02-06T20:10:20.698367+00:00 app[web.1]: : SELECT "users".* FROM "users"):
+2015-02-06T20:10:20.698369+00:00 app[web.1]:     12:   </thead>
+2015-02-06T20:10:20.698370+00:00 app[web.1]:     13: 
+2015-02-06T20:10:20.698373+00:00 app[web.1]:     15:     <% @users.each do |user| %>
+2015-02-06T20:10:20.698375+00:00 app[web.1]:     16:       <tr>
+2015-02-06T20:10:20.698376+00:00 app[web.1]:     17:         <td><%= user.name %></td>
+2015-02-06T20:10:20.698364+00:00 app[web.1]: LINE 1: SELECT "users".* FROM "users"
+2015-02-06T20:10:20.698378+00:00 app[web.1]:     18:         <td><%= user.email %></td>
+2015-02-06T20:10:20.698379+00:00 app[web.1]:   app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___2022150171599057010_69967719240280'
+2015-02-06T20:10:20.698381+00:00 app[web.1]: 
+2015-02-06T20:10:20.698382+00:00 app[web.1]: 
+2015-02-06T20:10:20.770083+00:00 heroku[router]: at=info method=GET path="/" host=sh-toy-app.herokuapp.com request_id=a306f283-26ea-43a9-a3c6-db8eb1b78765 fwd="197.160.212.120" dyno=web.1 connect=50ms service=39ms status=500 bytes=1754
+2015-02-06T20:10:21.110972+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=sh-toy-app.herokuapp.com request_id=c9ee9ead-3024-48dc-9d1f-79fd5d0e990a fwd="197.160.212.120" dyno=web.1 connect=4ms service=6ms status=200 bytes=228
